@@ -1,0 +1,27 @@
+spring:
+  rabbitmq:
+    host: local-server
+  redis:
+    host: local-server
+  datasource:
+    hikari:
+      maximum-pool-size: 50
+      connection-timeout: 60000
+      max-lifetime: 300000
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 50
+
+logging:
+  file:
+    name: "D:/data/logs/${spring.application.name:spring}.log"
+
+icu:
+  lowcoder:
+    spring:
+      commons:
+        exception:
+          print-stack-trace: true
+          show-detail: true
